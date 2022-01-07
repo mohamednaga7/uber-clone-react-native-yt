@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
 const HybridSafeAreaView = ({ children }) => {
 	return <SafeAreaView style={styles.droidSafeView}>{children}</SafeAreaView>;

@@ -12,6 +12,8 @@ import {
 import { Icon } from 'react-native-elements';
 import { useSelector } from 'react-redux';
 import tw from 'tailwind-react-native-classnames';
+import 'intl';
+import 'intl/locale-data/jsonp/en'; // or any other locale you need
 import { selectTravelTimeInformation } from '../slices/navSlice';
 
 const data = [
@@ -42,7 +44,7 @@ const RideOptionsCard = () => {
 	const [selected, setSelected] = useState(null);
 	const travelTimeInformation = useSelector(selectTravelTimeInformation);
 	return (
-		<SafeAreaView style={tw`bg-white flex-grow mb-12`}>
+		<React.Fragment>
 			<View>
 				<TouchableOpacity
 					style={[tw`absolute top-3 left-5 p-3 rounded-full`, { zIndex: 1 }]}
@@ -97,7 +99,8 @@ const RideOptionsCard = () => {
 					</TouchableOpacity>
 				</View>
 			</ScrollView>
-		</SafeAreaView>
+			<SafeAreaView />
+		</React.Fragment>
 	);
 };
 

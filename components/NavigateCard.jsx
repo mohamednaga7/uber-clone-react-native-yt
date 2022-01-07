@@ -20,7 +20,7 @@ const NavigateCard = () => {
 	const navigation = useNavigation();
 
 	return (
-		<SafeAreaView style={tw`bg-white flex-1`}>
+		<React.Fragment>
 			<Text style={tw`text-center py-5 text-xl`}>Good Morning, Mohamed</Text>
 			<View style={tw`border-t border-gray-200 flex-shrink`}>
 				<View>
@@ -75,7 +75,8 @@ const NavigateCard = () => {
 					</TouchableOpacity>
 				</View>
 			</View>
-		</SafeAreaView>
+			<SafeAreaView />
+		</React.Fragment>
 	);
 };
 
